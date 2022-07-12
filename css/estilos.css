@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #182327;
+    --text-color: #ddd;
+    --border-color: #aaa;
+    --main-font: 'Quicksand';
+    --border-radius: 5px;
+}
+
+* {
+    font-weight: normal !important;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    padding-bottom: 0.2em;
+    margin: 0 0 20px 0;
+}
+
+body{
+  margin: 0;
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+}
+
+.interfaz {
+    position: absolute;
+    width: 300px;
+    min-height: 100vh;
+    float: left;
+    font-size: 0.8em;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    max-height: 100vh;
+    color: var(--text-color);
+    background-color: rgba(15,19,23,0.75);
+    backdrop-filter: blur(5px);
+    transition: 0.6s;
+}
+
+.container-interfaz {
+    transition: 0.6s;
+}
+
+.interfaz--hidden {
+    transform: translateX(-300px);
+}
+
+.interfaz > .container-paneles {
+    overflow: auto;
+    transition: 0.6s;
+}
+
+.interfaz--hidden .container-paneles {
+    opacity: 0;
+}
+
+
+.interfaz--hidden img.tachadura-visibilidad {
+    opacity: 0;
+}
+
+
+.interfaz::-webkit-scrollbar{
+  display: none;
+}
+
+.boton-visibilidad-interfaz{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(300px);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(15,19,23,0.75);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 30% 0;
+    cursor: pointer;
+}
+
+.boton-visibilidad-interfaz > img {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    margin-top: 20%;
+    margin-left: 20%;
+    opacity: 0.4;
+    transition: 0.4s;
+}
+
+details {
+    padding: 15px;
+    /* border: 1px solid var(--border-color); */
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 5px;
+    border-radius: var(--border-radius);
+}
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+canvas{
+  float: right;
+}
+
+.línea {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.línea > *:last-child {
+    margin-left: 15px;
+}
+
+button {
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    font-family: var(--main-font);
+    font-size: 0.9em;
+    padding: 10px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    color: var(--text-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.noUi-target {
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    border: none;
+    border-radius: var(--border-radius);
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    box-shadow: none;
+    height: 16px;
+    width: 16px;
+    top: 0;
+    left: 0;
+    transform: translate(12px, 0px);
+}
+
+.noUi-handle:after, .noUi-handle:before {
+  display: none;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/nouislider.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+  <script type="text/javascript" src="js/nouislider.min.js"></script>
+  <title>Editor de paisajes</title>
+</head>
+<body>
+
+
+<div class="container-interfaz">
+  <div class="interfaz">
+    <h1>Editor de paisajes</h1>
+  
+    <div class="container-paneles">
+      <details open>
+        <summary>Editar terreno</summary>
+      <div class="línea">
+        <button id="generar-perfil">Nueva forma</button>
+        <button id="grabar-perfil">Grabar capa</button>
+      </div>
+      <p>Pendiente</p>
+      <div id="slider-pendiente"></div>
+      <p>Cantidad de puntos</p>
+      <div id="slider-cantidad-puntos"></div>
+      <p>Elevación</p>
+      <div id="slider-elevacion"></div>
+      <p>Opacidad</p>
+      <div id="slider-opacidad"></div>
+    </details>
+
+      <details>
+        <summary>Color de fondo</summary>
+        <p>Rojo (R)</p>
+        <div id="slider-bg-R"></div>
+        <p>Verde (G)</p>
+        <div id="slider-bg-G"></div>
+        <p>Azul (B)</p>
+        <div id="slider-bg-B"></div>
+      </details>
+  
+      <details>
+        <summary>Cómo usar</summary>
+        <p>Usá los controles de la sección <strong>"Editar terreno"</strong> para modificar el perfil del terreno.</p>
+        <p><strong>"Pendiente"</strong> define qué tan escarpado es el terreno (con valores más altos, es más accidentado; con valores más bajos, es más llano).</p>
+        <p><strong>"Cantidad de puntos"</strong> define el nivel de puntos horizontales que definen el terreno. Valores más bajos resultan en un perfil más simple, y valores más altos, en un perfil más complejo y detallado.</p>
+        <p><strong>"Elevación"</strong> define la posición vertical del terreno dentro de la imagen.</p>
+        <p><strong>"Opacidad"</strong> define la transparencia del terreno. Cuanto más bajo sea este valor, más transparente resulta el terreno.</p>
+        <p>Usá el botón <strong>"Nueva forma"</strong> para crear una nueva forma con la cual trabajar.</p>
+        <p>Usá el botón <strong>"Grabar capa"</strong> para "congelar" en su forma actual el perfil en el que estás trabajando. Esto te permite comenzar a trabajar sobre un perfil nuevo, y así crear varias capas diferentes en tu imagen.</p>
+        <p>Finalmente, podés cambiar el <strong>color de fondo</strong> de tu paisaje; para ello, podés componer un color distintos niveles de rojo, verde y azul (cada uno de los cuales tiene su propio control).</p>
+        <p>Cuando termines tu imagen, la podés guardar haciendo <strong>clic derecho</strong> sobre la misma y seleccionando <strong>"Guardar imagen como..."</strong></p>
+      </details>
+    </div> <!-- Container paneles -->
+  </div>
+  <div class="boton-visibilidad-interfaz">
+    <img src="img/icono-mostrar.svg" class="icono-visibilidad" alt="">
+    <img src="img/icono-ocultar.svg" class="tachadura-visibilidad" alt="">
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
