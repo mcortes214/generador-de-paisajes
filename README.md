@@ -7,3 +7,5 @@ La idea detrás de este proyecto es generar una serie de herramientas para produ
 Este generador es una versión ampliada de [Paisajes infinitos](https://mcortes214.github.io/paisajes-infinitos/).
 
 Este proyecto está en desarrollo.
+
+Entrá acá para [probar el generador de paisajes](https://mcortes214.github.io/generador-de-paisajes/)
